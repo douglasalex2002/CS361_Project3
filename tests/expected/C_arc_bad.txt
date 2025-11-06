@@ -1,0 +1,53 @@
+++++++++++++++++++++++++++
+SERVER RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 1 [BOOTREQUEST]
+Hardware Type (htype) = 7 [ARCNET]
+Hardware Address Length (hlen) = 1
+Hops (hops) = 0
+Transaction ID (xid) = 50 (0x0)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 0.0.0.0
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = f0
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP Request
+Request = 192.168.1.8
+Server Identifier = 192.168.10.0
+ERROR: Invalid server ID in request 192.168.10.0
+
+++++++++++++++++++++++++
+SERVER SENDING 250 BYTES:
++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 7 [ARCNET]
+Hardware Address Length (hlen) = 1
+Hops (hops) = 0
+Transaction ID (xid) = 50 (0x0)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 0.0.0.0
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = f0
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP NAK
+Server Identifier = 192.168.1.0

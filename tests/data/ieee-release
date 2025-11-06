@@ -1,0 +1,3 @@
+1 6 65535 a1b1c2d2e3f3:DHCPDISCOVER [htype=IEEE802, xid=65535, chaddr=a1b1c2d2e3f3]
+3 6 65535 a1b1c2d2e3f3 192.168.1.0 192.168.1.1:DHCPREQUEST [htype=IEEE802, xid=65535, chaddr=a1b1c2d2e3f3, server=192.168.1.0, reqid=192.168.1.1]
+7 6 65535 a1b1c2d2e3f3 192.168.1.0 192.168.1.1:DHCPRELEASE [htype=IEEE802, xid=65535, chaddr=a1b1c2d2e3f3, server=192.168.1.0, reqid=192.168.1.1]

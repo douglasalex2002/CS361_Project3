@@ -1,0 +1,432 @@
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 6 [IEEE 802 Networks]
+Hardware Address Length (hlen) = 6
+Hops (hops) = 0
+Transaction ID (xid) = 500 (0x1f4)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 192.168.1.1
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = 0123456789ab
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP Offer
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 1 [Ethernet (10Mb)]
+Hardware Address Length (hlen) = 6
+Hops (hops) = 0
+Transaction ID (xid) = 2000 (0x7d0)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 192.168.1.1
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = 010102020303
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP Offer
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 15 [Frame Relay]
+Hardware Address Length (hlen) = 2
+Hops (hops) = 0
+Transaction ID (xid) = 7500 (0x1d4c)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 192.168.1.1
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = c0a8
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP Offer
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 7 [ARCNET]
+Hardware Address Length (hlen) = 1
+Hops (hops) = 0
+Transaction ID (xid) = 10000 (0x2710)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 192.168.1.1
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = 65
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP Offer
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 7 [ARCNET]
+Hardware Address Length (hlen) = 1
+Hops (hops) = 0
+Transaction ID (xid) = 40000 (0x9c40)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 192.168.1.1
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = 87
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP Offer
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 1 [Ethernet (10Mb)]
+Hardware Address Length (hlen) = 6
+Hops (hops) = 0
+Transaction ID (xid) = 100000 (0x186a0)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 192.168.1.1
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = 010203040506
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP Offer
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 18 [Fibre Channel]
+Hardware Address Length (hlen) = 3
+Hops (hops) = 0
+Transaction ID (xid) = 250000 (0x3d090)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 192.168.1.1
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = ccddee
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP Offer
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 18 [Fibre Channel]
+Hardware Address Length (hlen) = 3
+Hops (hops) = 0
+Transaction ID (xid) = 500000 (0x7a120)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 192.168.1.1
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = c0d1e2
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP Offer
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 6 [IEEE 802 Networks]
+Hardware Address Length (hlen) = 6
+Hops (hops) = 0
+Transaction ID (xid) = 500 (0x1f4)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 0.0.0.0
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = 0123456789ab
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP ACK
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 1 [Ethernet (10Mb)]
+Hardware Address Length (hlen) = 6
+Hops (hops) = 0
+Transaction ID (xid) = 2000 (0x7d0)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 0.0.0.0
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = 010102020303
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP ACK
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 15 [Frame Relay]
+Hardware Address Length (hlen) = 2
+Hops (hops) = 0
+Transaction ID (xid) = 7500 (0x1d4c)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 0.0.0.0
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = c0a8
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP ACK
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 7 [ARCNET]
+Hardware Address Length (hlen) = 1
+Hops (hops) = 0
+Transaction ID (xid) = 10000 (0x2710)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 0.0.0.0
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = 65
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP ACK
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 7 [ARCNET]
+Hardware Address Length (hlen) = 1
+Hops (hops) = 0
+Transaction ID (xid) = 40000 (0x9c40)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 0.0.0.0
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = 87
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP ACK
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 1 [Ethernet (10Mb)]
+Hardware Address Length (hlen) = 6
+Hops (hops) = 0
+Transaction ID (xid) = 100000 (0x186a0)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 0.0.0.0
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = 010203040506
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP ACK
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 18 [Fibre Channel]
+Hardware Address Length (hlen) = 3
+Hops (hops) = 0
+Transaction ID (xid) = 250000 (0x3d090)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 0.0.0.0
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = ccddee
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP ACK
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+
+++++++++++++++++++++++++++
+CLIENT RECEIVED 256 BYTES:
+++++++++++++++++++++++++++
+
+------------------------------------------------------
+BOOTP Options
+------------------------------------------------------
+Op Code (op) = 2 [BOOTREPLY]
+Hardware Type (htype) = 18 [Fibre Channel]
+Hardware Address Length (hlen) = 3
+Hops (hops) = 0
+Transaction ID (xid) = 500000 (0x7a120)
+Seconds (secs) = 0 Days, 0:00:00
+Flags (flags) = 0
+Client IP Address (ciaddr) = 0.0.0.0
+Your IP Address (yiaddr) = 0.0.0.0
+Server IP Address (siaddr) = 0.0.0.0
+Relay IP Address (giaddr) = 0.0.0.0
+Client Ethernet Address (chaddr) = c0d1e2
+------------------------------------------------------
+DHCP Options
+------------------------------------------------------
+Magic Cookie = [OK]
+Message Type = DHCP ACK
+IP Address Lease Time = 30 Days, 0:00:00
+Server Identifier = 192.168.1.0
+

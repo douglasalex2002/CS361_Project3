@@ -1,0 +1,21 @@
+# list of integration tests
+#  format: run_test <TAG> <ARGS>
+#    <TAG>      used as the root for all filenames (i.e., "expected/$TAG.txt")
+#    <ARGS>     command-line arguments to test
+
+run_test    D_eth_disc              "data/eth-disc"
+run_test    D_ieee_req              "data/ieee-req"
+
+run_test    C_eth_dhcp              "data/eth-dhcp"
+run_test    C_arc_two               "data/arc-two"
+run_test    C_multi                 "data/multi-dhcp"
+#run_test    C_arc_bad               "data/arc-req-bad"
+
+run_test    B_ieee_release          "data/ieee-release"
+run_test    B_arc_two               "data/arc-two-rel"
+run_test    B_frame_interleave      "data/frame-inter"
+run_test    B_fibre_repeat          "data/fibre-repeat"
+run_test    B_multi_reuse           "data/multi-reuse"
+run_test    B_multi_release         "data/multi-release"
+
+run_test    A_threads               ""

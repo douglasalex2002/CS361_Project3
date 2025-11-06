@@ -1,0 +1,1 @@
+3 7 50 f0 192.168.10.0 192.168.1.8:DHCPREQUEST [htype=ARC, xid=50, chaddr=f0, server=192.168.10.0, reqid=192.168.1.8]
