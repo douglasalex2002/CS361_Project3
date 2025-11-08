@@ -23,7 +23,7 @@ DHCP Options
 Magic Cookie = [OK]
 Message Type = DHCP Discover
 
-++++++++++++++++++++++++
++++++++++++++++++++++++++
 SERVER SENDING 256 BYTES:
 +++++++++++++++++++++++++
 
