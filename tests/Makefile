@@ -25,7 +25,7 @@
 EXE=../dhcps
 TEST=testsuite
 MODS=public.o
-OBJS=../port_utils.o
+OBJS=../port_utils.o ../build/dhcp.o
 LIBS=
 
 UTESTOUT=utests.txt

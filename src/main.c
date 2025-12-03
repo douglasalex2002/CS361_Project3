@@ -8,7 +8,7 @@
 #include "port_utils.h"
 #include "server.h"
 
-static bool get_args (int, char **);
+static bool get_args (int, char **, long *);
 
 bool debug = false;
 
@@ -16,7 +16,7 @@ int
 main (int argc, char **argv)
 {
   long to_seconds = 2;
-  bool success = get_args (argc, argv);
+  bool success = get_args (argc, argv, &to_seconds);
   if (!success)
     return EXIT_FAILURE;
 
@@ -34,15 +34,21 @@ main (int argc, char **argv)
 }
 
 static bool
-get_args (int argc, char **argv)
+get_args (int argc, char **argv, long *to_seconds)
 {
   int ch = 0;
-  while ((ch = getopt (argc, argv, "dh")) != -1)
+  while ((ch = getopt (argc, argv, "dhs:t:")) != -1)
     {
       switch (ch)
         {
         case 'd':
           debug = true;
+          break;
+        case 's':
+          *to_seconds = atol(optarg);
+          break;
+        case 't':
+          // lets just ignore this for now, due it at later phase
           break;
         default:
           return false;
