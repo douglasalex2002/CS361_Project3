@@ -24,7 +24,8 @@ struct in_addr THIS_SERVER;
 
 struct lease 
 {
-  bool used; 
+  bool used;
+  bool pending; 
   uint8_t chaddr[CHADDR_LEN];
   struct in_addr ip;
 };
@@ -36,27 +37,30 @@ init_leases (void)
 {
   for (int i = 0; i < MAX_CLIENTS; i++)
     {
-      leases[i].used = false; 
+      leases[i].used = false;
+      leases[i].pending = false;
+      memset(leases[i].chaddr, 0, CHADDR_LEN);
+      leases[i].ip.s_addr = 0;
     }
 }
 
 static bool
-same_chaddr (const uint8_t *a, const uint8_t *b)
+same_chaddr (const uint8_t *a, const uint8_t *b, int hlen)
 {
-  for (int i = 0; i < CHADDR_LEN; i++)
+  for (int i = 0; i < hlen; i++)
     {
       if (a[i] != b[i]) return false;
     }
-  
+    
   return true; 
 }
 
 static struct lease *
-find_lease (const uint8_t *chaddr)
+find_lease (const uint8_t *chaddr, int hlen)
 {
   for (int i = 0; i < MAX_CLIENTS; i++)
     {
-      if (leases[i].used && same_chaddr(leases[i].chaddr, chaddr))
+      if (leases[i].used && same_chaddr(leases[i].chaddr, chaddr, hlen))
         {
           return &leases[i];
         }
@@ -76,26 +80,60 @@ ip_for_index (int idx)
 }
 
 static struct lease *
-assign_lease (const uint8_t *chaddr)
+assign_lease (const uint8_t *chaddr, int hlen)
 {
-  struct lease *existing = find_lease (chaddr);
-  if (existing != NULL)
+  // 1. Reuse existing active lease for this chaddr
+  for (int i = 0; i < MAX_CLIENTS; i++)
     {
-      return existing;
+      if (leases[i].used && same_chaddr(leases[i].chaddr, chaddr, hlen))
+        {
+          return &leases[i];
+        }
     }
-  
-    for (int i = 0; i < MAX_CLIENTS; i++)
-      {
-        if(!leases[i].used)
-          {
-            leases[i].used = true;
-            memcpy (leases[i].chaddr, chaddr, CHADDR_LEN);
-            leases[i].ip = ip_for_index (i);
-            return &leases[i];
-          }
-      }
 
-    return NULL; 
+  // 2. Reuse a tombstone for this chaddr (released, remembers IP)
+  for (int i = 0; i < MAX_CLIENTS; i++)
+    {
+      if (!leases[i].used &&
+          leases[i].ip.s_addr != 0 &&                 
+          same_chaddr(leases[i].chaddr, chaddr, hlen))
+        {
+          leases[i].used    = true;
+          leases[i].pending = false;
+      
+          return &leases[i];
+        }
+    }
+
+  // 3. Brand-new lease in an empty slot (never used before)
+  for (int i = 0; i < MAX_CLIENTS; i++)
+    {
+      if (!leases[i].used &&
+          leases[i].ip.s_addr == 0)                  
+        {
+          leases[i].used    = true;
+          leases[i].pending = false;
+          memcpy(leases[i].chaddr, chaddr, hlen);
+          leases[i].ip = ip_for_index(i);
+          return &leases[i];
+        }
+    }
+
+  // 4. No new Ips left: reuse any released lease
+  for (int i = 0; i < MAX_CLIENTS; i++)
+    {
+      if (!leases[i].used &&
+          leases[i].ip.s_addr != 0)                   
+        {
+          leases[i].used    = true;
+          leases[i].pending = false;
+          memcpy(leases[i].chaddr, chaddr, hlen);     
+          return &leases[i];
+        }
+    }
+
+  // 5. Completely out of space
+  return NULL;
 }
 
 int
@@ -242,6 +280,21 @@ setup_server (char *protocol, long to_seconds)
 
 else  // Phase 2: XID != 0
       {
+
+        // Handle DHCPRELASE
+        if (message_type == DHCPRELEASE)
+          {
+            struct lease *lease = find_lease (msg->chaddr, msg->hlen);
+            if (lease != NULL)
+              {
+                lease->used =false;
+                lease->pending = false;
+              }
+
+            free_options(&options);
+            continue; 
+          }
+
         msg_t reply;
         memset(&reply, 0, sizeof(msg_t));
 
@@ -261,7 +314,7 @@ else  // Phase 2: XID != 0
         if (message_type == DHCPDISCOVER)
           {
             // reuse or assign a lease
-            lease = assign_lease(msg->chaddr);
+            lease = assign_lease(msg->chaddr, msg->hlen);
 
             if (lease == NULL)
               {
@@ -271,7 +324,8 @@ else  // Phase 2: XID != 0
                 reply_type = DHCPNAK;
               }
             else
-              {
+              { 
+                lease->pending = true; 
                 reply.yiaddr = lease->ip;
                 reply_type = DHCPOFFER;
               }
@@ -295,7 +349,7 @@ else  // Phase 2: XID != 0
                 have_reqip = true;
               }
           
-            lease = find_lease(msg->chaddr);
+            lease = find_lease(msg->chaddr, msg->hlen);
 
             bool ok = true;
 
@@ -305,6 +359,8 @@ else  // Phase 2: XID != 0
               ok = false;
             else if (lease == NULL)
               ok = false;
+            else if (!lease->pending)
+              ok = false; 
             else if (req_ip.s_addr != lease->ip.s_addr)
               ok = false;
           
@@ -312,11 +368,17 @@ else  // Phase 2: XID != 0
               {
                 reply.yiaddr = lease->ip;
                 reply_type = DHCPACK;
+
+                lease->pending = false;
+                lease->used = true;
               }
             else
               {
                 // mismatch somewhere → NAK, yiaddr remains 0.0.0.0
                 reply_type = DHCPNAK;
+
+                if (lease != NULL)
+                  lease->pending = false; 
               }
           }
         else
@@ -360,7 +422,7 @@ else  // Phase 2: XID != 0
 
         free(response);
         free_options(&options);
-        // NOTE: no break; Phase 2 keeps serving until timeout
+        // Phase 2 keeps serving until timeout
       }
     }  
   close(sock);
