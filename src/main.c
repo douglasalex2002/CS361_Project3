@@ -45,7 +45,7 @@ get_args (int argc, char **argv, long *to_seconds)
           debug = true;
           break;
         case 's':
-          *to_seconds = atol(optarg);
+          *to_seconds = atol (optarg);
           break;
         case 't':
           // lets just ignore this for now, due it at later phase
